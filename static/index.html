@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="index.css">
+  <title>Restaurant Search</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+  <link rel="stylesheet" href="/index.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <main>
+      <h1>Zomato Restaurant <span>Search</span></h1>
+      <div id="map-template"> </div>
+      <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+      <script src="/leaflet.js"></script>
+      <form action="">
+        <div class="form-wrapper">
+          <label for="restaurant-name">Search</label>
+          <input name="restaurant-name" type="text" id="restaurant-name" placeholder="Search for a restaurant">
+        </div>
+        <div class="form-wrapper">
+          <select id="list">
+            <option value="Sydney">Sydney</option>
+            <option value="Brisbane">Brisbane</option>
+            <option value="Melbourne">Melbourne</option>
+            <option value="Canberra">Canberra</option>
+            <option value="Perth">Perth</option>
+            <option value="Adelaide">Adelaide</option>
+            <option value="Darwin">Darwin</option>
+            <option value="Hobart">Hobart</option>
+          </select>
+          
+        </div>
+        <input type="submit">
+      </form>
+    </main>
+    <hr>
+    <section id="restaurant-results">
+    </section>
+  </div>
+
+  <template>
+    <div class="result-card">
+
+      <div class="result-header">
+        <h2 class="result-title">${title}</h2>
+        <h3 class="result-location result-neighborhood">${neighborhood}</h3>
+        <h3 class="result-location result-address">${address}</h3>
+        <h6 class="result-timing">${timing}</h6>
+        <p class="result-price">${price}</p>
+        <!-- <p>${cuisine type}</p> -->
+      </div>
+
+      <div class="result-body">
+        <img src="" alt="restaurant-photo" class="result-thumbnail">
+      </div>
+      <div class="result-footer">
+        <button class="result-footer-button"><a href="" target="_blank" class="result-website">Visit
+            Website</a></button>
+      </div>
+    </div>
+
+  </template>
+  <script src="index.js"></script>
+</body>
+
+</html>
